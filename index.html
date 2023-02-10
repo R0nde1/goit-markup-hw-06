@@ -90,18 +90,47 @@
                                 </svg></button>
                             <strong class="modal-title">Залиште свої дані, ми вам передзвонимо</strong>
                             <form class="modal-form">
-                                <label class="modal-form-label" type="text" name="user_name" id="user_name" />
+                                <label class="modal-form-label" for="user_name">Ім'я</label>
                                 <div class="modal-form-group">
                                     <input class="modal-form-field" type="text">
                                     <svg class='modal-form-icon' width='18' height='18'>
-                                        <use href='.img/svg/icons.svg#icon-person-black'></use>
+                                        <use href='./img/svg/icons.svg#icon-person-black'></use>
                                     </svg>
                                 </div>
+                                <label class="modal-form-label" for="user_name">Телефон</label>
+                                <div class="modal-form-group">
+                                    <input class="modal-form-field" type="text">
+                                    <svg class='modal-form-icon' width='18' height='18'>
+                                        <use href='./img/svg/icons.svg#icon-phone-black'></use>
+                                    </svg>
+                                </div>
+                                <label class="modal-form-label" for="user_name">Пошта</label>
+                                <div class="modal-form-group">
+                                    <input class="modal-form-field" type="text">
+                                    <svg class='modal-form-icon' width='18' height='18'>
+                                        <use href='./img/svg/icons.svg#icon-email-black'></use>
+                                    </svg>
+                                </div>
+                                <label class="modal-form-label" for="user_comment">Коментар</label>
+                                <textarea class="modal-form-comment" name="user_comment" id="user_comment" rows="6"
+                                    placeholder="введіть текст"></textarea>
+                                <label class="check-accept">
+                                    <input class="check-input" type="checkbox">
+
+                                    <span class="agreement"> Погоджуюся з розсилкою та приймаю</span>
+                                    <a class="agreement-link" href="/">Умови
+                                        договору</a>
+
                                 </label>
-                            </form>
+                                <button type="submit" class="hero-button">Відправити</button>
+
+
                         </div>
+
+                        </form>
                     </div>
                 </div>
+            </div>
             </div>
         </section>
 
@@ -478,6 +507,8 @@
             </ul>
         </div>
     </div>
+
+    <label for="subscribe" class="subscribe"></label>
 </footer>
 
 </html>
