@@ -325,7 +325,7 @@ body {
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     width: 528px;
-    min-height: 581px;
+
     padding: 40px;
     background-color: var(--primary-bg-color);
     border-radius: 4px;
@@ -335,8 +335,13 @@ body {
 
 .modal-title {
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: calc(23/20);
+    letter-spacing: 0.03em;
+    color: var(--title-text-color);
 }
 
 .modal-form {}
@@ -350,6 +355,7 @@ body {
 
 .modal-form-group {
     position: relative;
+    margin-bottom: 28px;
 }
 
 .modal-form-field {
@@ -357,7 +363,7 @@ body {
     width: 100%;
     height: 40px;
     padding: 12px 42px;
-    margin-bottom: 28px;
+
     border-radius: 4px;
     outline: transparent;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -381,16 +387,23 @@ body {
 }
 
 .modal-form-comment {
+
     width: 100%;
     height: 120px;
     resize: none;
     border-radius: 4px;
-    border-radius: 4px;
-    outline: transparent;
+
+
     border: 1px solid rgba(33, 33, 33, 0.2);
-    transition: 250ms;
 
+    outline: transparent;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: var(--accent)
+}
 
+.modal-form-comment:focus {
+    border-color: var(--accent);
 }
 
 .modal-form-icon:focus {
@@ -404,6 +417,10 @@ body {
 .backdrop.is-hidden .modal {
     opacity: 0;
     transform: translateX(-50%) translateY(-70%);
+}
+
+.modal-form-comment:focus {
+    border-color: var(--accent);
 }
 
 .close-modal {
@@ -424,12 +441,25 @@ body {
     transition-property: var(--accent);
 }
 
-.modal-cross:hover {
-    fill: var(--accent);
-    border-color: var(--accent);
+.modal-cross {
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: var(--accent);
 }
 
+.modal-cross:hover {
+    fill: var(--accent);
+}
 
+.close-modal:hover .modal-cross,
+.close-modal:focus .modal-cross {
+    fill: var(--accent);
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    border-color: var(--accent);
+}
 
 .modal-form-comment {
     width: 100%;
@@ -442,6 +472,10 @@ body {
     line-height: calc(14/12);
     letter-spacing: 0.01em;
     transition: background-color 250ms linear color rgba(117, 117, 117, 0.5);
+}
+
+.modal-form-comment::placeholder {
+    color: var(--primary-text-color);
 }
 
 .check-accept {
@@ -496,6 +530,8 @@ body {
     color: var(--secondary-button-color);
     background-color: var(--accent);
     cursor: pointer;
+    outline: transparent;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: var(--accent);
@@ -921,14 +957,21 @@ body {
 
 .footer-subscribe-form {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-subscribe-label {
+    color: var(--icon-primary-color);
+    margin-right: 12px;
 }
 
 .footer-form-field {
-    display: block;
-    width: 100%;
+
+    width: 358px;
     height: 50px;
     padding: 15px 16px;
-    margin-right: 12px;
+
     border-radius: 4px;
     background-color: transparent;
     color: var(--wh-text-color);
