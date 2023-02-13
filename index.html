@@ -78,19 +78,19 @@
         <section class="head">
             <div class="container">
                 <h1 class="hero">Ефективні рішення для<br> вашого бізнесу</h1>
-                <button class="hero-button" data-modal-open>Замовити послугу</button>
+                <button class="hero-button" type="button" data-modal-open>Замовити послугу</button>
                 <div class="backdrop is-hidden" data-modal>
 
                     <div class="backdrop">
-                        <form name="order-form" autocomplete="off" novalidate>
+                        
                             <div class="modal">
 
-                                <button class="close-modal" data-modal-close><svg class='modal-cross' width='15'
+                                <button class="close-modal" type="button" data-modal-close><svg class='modal-cross' width='15'
                                         height='15'>
                                         <use href='./img/svg/icons.svg#icon-close-black'></use>
                                     </svg></button>
                                 <strong class="modal-title">Залиште свої дані, ми вам передзвонимо</strong>
-
+                                <form name="order-form" autocomplete="off" novalidate>
 
                                 <label class="modal-form-label" for="user_name">Ім'я</label>
                                 <div class="modal-form-group">
